@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{856134C9-7526-461D-A646-860FA9529A12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EulerLibrary.Problems</RootNamespace>
+    <AssemblyName>EulerLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MathLibrary\MathLibrary.cs" />
+    <Compile Include="MathLibrary\Premutations.cs" />
+    <Compile Include="MathLibrary\Utilities.cs" />
+    <Compile Include="Problems\AmicableNumbers.cs" />
+    <Compile Include="Problems\ChampernownesConstant.cs" />
+    <Compile Include="Problems\CircularPrimes.cs" />
+    <Compile Include="Problems\CodedTriangleNumbers.cs" />
+    <Compile Include="Problems\CoinSums.cs" />
+    <Compile Include="Problems\ConsecutivePrimeSum.cs" />
+    <Compile Include="Problems\CountingSundays.cs" />
+    <Compile Include="Problems\DigitCancellingFractions.cs" />
+    <Compile Include="Problems\DigitFactorials.cs" />
+    <Compile Include="Problems\DigitFifthPowers.cs" />
+    <Compile Include="Problems\DistinctPowers.cs" />
+    <Compile Include="Problems\DistinctPrimesFactors.cs" />
+    <Compile Include="Problems\DoubleBasePalindromes.cs" />
+    <Compile Include="Problems\EvenFibonacci.cs" />
+    <Compile Include="Problems\FactorialDigitSum.cs" />
+    <Compile Include="Problems\Fibonacci1000digit.cs" />
+    <Compile Include="Problems\GenericSolution.cs" />
+    <Compile Include="Problems\GoldbachsOther.cs" />
+    <Compile Include="Problems\HighlyDivisibleTriangle.cs" />
+    <Compile Include="Problems\IEulerSolution.cs" />
+    <Compile Include="Problems\IntegerRightTriangles.cs" />
+    <Compile Include="Problems\LargestPalindromeProduct.cs" />
+    <Compile Include="Problems\LargestPrimeFactor.cs" />
+    <Compile Include="Problems\LargestProductGrid.cs" />
+    <Compile Include="Problems\LargestProductSeries.cs" />
+    <Compile Include="Problems\LargeSum.cs" />
+    <Compile Include="Problems\LatticePaths.cs" />
+    <Compile Include="Problems\LexigraphicPremutations.cs" />
+    <Compile Include="Problems\LongestCollatz.cs" />
+    <Compile Include="Problems\MaximumPathSum.cs" />
+    <Compile Include="Problems\Mulitple3or5.cs" />
+    <Compile Include="Problems\NamesScores.cs" />
+    <Compile Include="Problems\NonabundantSums.cs" />
+    <Compile Include="Problems\NumberLetterCounts.cs" />
+    <Compile Include="Problems\PandigitalMultiples.cs" />
+    <Compile Include="Problems\PandigitalPrime.cs" />
+    <Compile Include="Problems\PandigitalProducts.cs" />
+    <Compile Include="Problems\PentagonNumbers.cs" />
+    <Compile Include="Problems\PowerDigitSum.cs" />
+    <Compile Include="Problems\Prime10001.cs" />
+    <Compile Include="Problems\PrimeDigitReplacements.cs" />
+    <Compile Include="Problems\PrimePermutations.cs" />
+    <Compile Include="Problems\ProblemFactory.cs" />
+    <Compile Include="Problems\PythagoreanTriplet.cs" />
+    <Compile Include="Problems\QuadraticPrimes.cs" />
+    <Compile Include="Problems\ReciprocalCycles.cs" />
+    <Compile Include="Problems\SelfPowers.cs" />
+    <Compile Include="Problems\SmallestMultiple.cs" />
+    <Compile Include="Problems\SpiralDiagonals.cs" />
+    <Compile Include="Problems\SubstringDivisibility.cs" />
+    <Compile Include="Problems\SummationPrimes.cs" />
+    <Compile Include="Problems\SumSquareDifference.cs" />
+    <Compile Include="Problems\TriPentHex.cs" />
+    <Compile Include="Problems\TruncatablePrimes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MathLibrary\ReallyBigInt.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
