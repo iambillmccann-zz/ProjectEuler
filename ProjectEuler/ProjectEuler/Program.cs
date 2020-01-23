@@ -1,5 +1,6 @@
 ﻿using EulerLibrary.Problems;
 using EulerLibrary;
+using System;
 using System.Diagnostics;
 
 namespace ProjectEuler.Problems
@@ -7,29 +8,53 @@ namespace ProjectEuler.Problems
     class Program
     {
         private static Stopwatch totalTime;
+        private static string quitString = "Q";
+
+        private static string getUserInput()
+        {
+            Console.Write("What problem shall I run? Or type 'Q' to quit. ");
+            return Console.ReadLine();
+        }
 
         static void Main(string[] args)
         {
-            int firstProblem = 51;                                 // change this to the first problem to solve
-            int lastProblem = firstProblem;                        // change this to the last problem to solve
+            int problemNumber = 0;
+            string userInput = null;
 
             ProblemFactory problemFactory = new ProblemFactory();
             totalTime = new Stopwatch();
-            
-            for (int problemNumber = firstProblem; problemNumber <= lastProblem; problemNumber++)
-            {
-                totalTime.Reset();
-                totalTime.Start();
-                string result = problemFactory.GetSolution(problemNumber).Compute();
-                totalTime.Stop();
 
-                System.Console.WriteLine("\n-----------------------------------------------------------------------");
-                System.Console.WriteLine("Solution to problem " + problemNumber + " = " + result);
-                System.Console.WriteLine("Execution time was " + Utilities.FormatMilliseconds(totalTime.ElapsedMilliseconds));
-                System.Console.WriteLine("-----------------------------------------------------------------------");
+            userInput = getUserInput();
+            
+            while (userInput.ToUpper() != quitString)
+            {
+                try
+                {
+                    problemNumber = Convert.ToInt32(userInput);
+                    //ToDo check the problem number to verify that it has been implemented.
+
+                    totalTime.Reset();
+                    totalTime.Start();
+                    string result = problemFactory.GetSolution(problemNumber).Compute();
+                    totalTime.Stop();
+
+                    Console.WriteLine("\n-----------------------------------------------------------------------");
+                    Console.WriteLine("Solution to problem " + problemNumber + " = " + result);
+                    Console.WriteLine("Execution time was " + Utilities.FormatMilliseconds(totalTime.ElapsedMilliseconds));
+                    Console.WriteLine("-----------------------------------------------------------------------");
+                    Console.WriteLine();
+
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("\nSorry but I did not understand that. Please type the problem number or Q to quit.");
+                }
+
+                userInput = getUserInput();
             }
-            System.Console.WriteLine("Press any key to continue");
-            System.Console.ReadKey();
+
+            Console.WriteLine("Goodbye. Press any key to continue");
+            Console.ReadKey();
         }
     }
 }
