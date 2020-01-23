@@ -20,6 +20,11 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+*.exe
+*.dll
+*.pdb
+*.lock
+*.ide
 
 # OSX
 # =========================

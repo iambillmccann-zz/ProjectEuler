@@ -3,3 +3,8 @@ C:\Users\Bill\Documents\GitHub\ProjectEuler\ProjectEuler\EulerLibrary\bin\Debug\
 C:\Users\Bill\Documents\GitHub\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.dll
 C:\Users\Bill\Documents\GitHub\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.pdb
 C:\Users\Bill\Documents\GitHub\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.csprojResolveAssemblyReference.cache
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\bin\Debug\EulerLibrary.dll
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\bin\Debug\EulerLibrary.pdb
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.csprojAssemblyReference.cache
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.dll
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.pdb
