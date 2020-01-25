@@ -60,6 +60,10 @@ namespace ProjectEuler.Problems
             return result;
         }
 
+        /// <summary>
+        /// This is the main program.
+        /// </summary>
+        /// <param name="args">The program does not read command line parameters.</param>
         static void Main(string[] args)
         {
             int problemNumber = 0;
