@@ -230,10 +230,5 @@ ProjectEuler/.vs/ProjectEuler/v16/.suo
 *.exe
 *.pdb
 *.cache
-*.exe
-*.pdb
-ProjectEuler/.vs/ProjectEuler/v16/.suo
-*.exe
-*.pdb
-*.exe
-*.pdb
+*.dll
+

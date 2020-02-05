@@ -4,10 +4,23 @@ using System.Linq;
 
 namespace EulerLibrary
 {
-    public class MathLibrary
+    public static class MathLibrary
     {
         private static int[] trials;
         private static int sizeOfTrial;
+
+        /// <summary>
+        /// The Arithmetic Series is the sum of an Arithmetic Progression
+        /// </summary>
+        /// <param name="numberOfTerms">Number of terms in the series</param>
+        /// <param name="firstTerm">The first term</param>
+        /// <param name="lastTerm">The last term</param>
+        /// <returns>The value of the Arithmetic Series</returns>
+        public static long ArithmeticSeries(long numberOfTerms, long firstTerm, long lastTerm)
+        {
+            return numberOfTerms * (firstTerm + lastTerm) / 2;
+        }
+
 
         /// <summary>
         /// This method determines if a number will divide evenly longo another
@@ -182,7 +195,7 @@ namespace EulerLibrary
             for (int index = 0; index < number.ToString().Length; index++)
             {
                 digits.Add(workNumber % 10);
-                workNumber = workNumber / 10;
+                workNumber /= 10;
             }
             return digits;
         }
@@ -223,7 +236,7 @@ namespace EulerLibrary
             {
                 long remainder = workNumber % 10;
                 result = (result * 10) + remainder;
-                workNumber = workNumber / 10;
+                workNumber /= 10;
             }
 
             return result;
@@ -274,7 +287,7 @@ namespace EulerLibrary
             foreach (long number in numbers)
             {
                 if (number.Equals(0)) return 0;   // A zero will make the product zero
-                result = result * number;
+                result *= number;
             }
             return result;
         }
@@ -497,34 +510,6 @@ namespace EulerLibrary
                 string letter = word.Substring(index, 1).ToUpper();
                 result += letters.IndexOf(letter);
             }
-            return result;
-        }
-
-        /// <summary>
-        /// This is a very spcialized method. It counts the number of digits that repeat
-        /// in a fraction.
-        /// </summary>
-        /// <param name="numerator"></param>
-        /// <param name="demoninator"></param>
-        /// <returns>The number of countDecimals that repeat</returns>
-        public static long SizeOfRepeatedDecimals(long numerator, long demoninator)
-        {
-            long result = 0;
-            long[] remainders = new long[1000];
-            bool done = false;
-            int digitPostion = 0;
-
-            while (!done)
-            {
-                digitPostion++;
-                long quotient = numerator / demoninator;
-                long remainder = numerator % demoninator;
-                numerator *= 10;
-
-                if (quotient.Equals(0)) continue;
-
-            }
-
             return result;
         }
 
