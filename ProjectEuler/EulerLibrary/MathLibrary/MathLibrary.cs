@@ -21,7 +21,6 @@ namespace EulerLibrary
             return numberOfTerms * (firstTerm + lastTerm) / 2;
         }
 
-
         /// <summary>
         /// This method determines if a number will divide evenly longo another
         /// </summary>
