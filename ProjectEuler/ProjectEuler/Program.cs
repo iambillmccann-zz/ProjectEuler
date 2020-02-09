@@ -8,7 +8,7 @@ namespace ProjectEuler.Problems
     {
         private static Stopwatch totalTime;
 
-        static void Main(string[] args)
+        static void Main()
         {
             int firstProblem = 51;                                 // change this to the first problem to solve
             int lastProblem = firstProblem;                        // change this to the last problem to solve
