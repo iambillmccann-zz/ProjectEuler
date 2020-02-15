@@ -55,13 +55,13 @@ namespace EulerLibrary
 
             for (long number = 2; number <= max; number++)
             {
-                bool notPrime = false;
+                bool isPrime = true;
                 foreach (long divisor in primeNumbers)
                 {
                     if (Math.Sqrt((double)number) < divisor) break;
-                    if (IsMultiple(number, divisor)) notPrime = true;
+                    if (IsMultiple(number, divisor)) isPrime = false;
                 }
-                if (notPrime.Equals(false)) primeNumbers.Add(number);
+                if (isPrime.Equals(true)) primeNumbers.Add(number);
             }
 
             return primeNumbers;
@@ -159,7 +159,7 @@ namespace EulerLibrary
                     factors.Add(primeNumber);
                     long nextNumber = number / primeNumber;
                     if (primeNumbers.Contains(nextNumber))
-                        factors.Add(nextNumber);
+                        factors.Add(nextNumber);            // When the next number prime, we are done
                     else
                         factors.AddRange(GetFactors(nextNumber, primeNumbers));
                     break;
