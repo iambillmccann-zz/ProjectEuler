@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EulerLibrary
 {
-    public class Utilities
+    public static class Utilities
     {
         /// <summary>
         /// Convert a timestamp of milliseconds to a formattted time amount in the form HH:MM:SS.mmmm

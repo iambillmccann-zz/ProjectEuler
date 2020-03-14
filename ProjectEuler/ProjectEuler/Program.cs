@@ -8,17 +8,17 @@ namespace ProjectEuler.Problems
     class Program
     {
         private static Stopwatch totalTime;
-        private static string quitString = "Q";
-        private static int lastProblem = 51;
+        private const string quitString = "Q";
+        private const int lastProblem = 51;
 
         /// <summary>
         /// getUserInput is a simple method for reading from the console.
         /// </summary>
         /// <returns>A string that represents the user's input.</returns>
-        private static int getUserInput()
+        private static int GetUserInput()
         {
             Console.Write("What problem shall I run? Or type 'Q' to quit. ");
-            return checkUserInput(Console.ReadLine());
+            return CheckUserInput(Console.ReadLine());
         }
 
         /// <summary>
@@ -33,28 +33,27 @@ namespace ProjectEuler.Problems
         /// </summary>
         /// <param name="userInput">A string entered by the user.</param>
         /// <returns>A valid integer result.</returns>
-        private static int checkUserInput(string userInput)
+        private static int CheckUserInput(string userInput)
         {
             int result = -1;
             if (userInput.ToUpper() == quitString) return result;
 
-            try
-            {
-                result = Convert.ToInt32(userInput);
-                if (result < 1)
-                {
-                    Console.WriteLine("\nBTW, problem numbers are positive integers.");
-                    result = getUserInput();
-                } else if (result > lastProblem)
-                {
-                    Console.WriteLine("\nI have only completed problems 1 through " + lastProblem.ToString());
-                    result = getUserInput();
-                }
-            }
-            catch (FormatException)
+            if (!int.TryParse(userInput, out result))
             {
                 Console.WriteLine("\nSorry but I did not understand that. Please type the problem number or Q to quit.");
-                result = getUserInput();
+                return GetUserInput();
+            }
+
+            if (result < 1)
+            {
+                Console.WriteLine("\nBTW, problem numbers are positive integers.");
+                return GetUserInput();
+            }  
+            
+            if (result > lastProblem)
+            {
+                Console.WriteLine("\nI have only completed problems 1 through " + lastProblem.ToString());
+                return GetUserInput();
             }
 
             return result;
@@ -63,15 +62,15 @@ namespace ProjectEuler.Problems
         /// <summary>
         /// This is the main program.
         /// </summary>
-        /// <param name="args">The program does not read command line parameters.</param>
-        static void Main(string[] args)
+        /// 
+        static void Main()
         {
-            int problemNumber = 0;
+            int problemNumber;
 
             ProblemFactory problemFactory = new ProblemFactory();
             totalTime = new Stopwatch();
 
-            problemNumber = getUserInput();
+            problemNumber = GetUserInput();
 
             while (problemNumber > 0)
             {
@@ -85,7 +84,7 @@ namespace ProjectEuler.Problems
                 Console.WriteLine("Execution time was " + Utilities.FormatMilliseconds(totalTime.ElapsedMilliseconds));
                 Console.WriteLine("-----------------------------------------------------------------------");
                 Console.WriteLine();
-                problemNumber = getUserInput();
+                problemNumber = GetUserInput();
             }
 
             Console.WriteLine("Goodbye. Press any key to continue");
