@@ -22,4 +22,30 @@ namespace UtilitiesTests
             Assert.AreEqual(expected, actual, "Reversed odd number of digits failed.");
         }
     }
+
+    [TestClass]
+    public class IsMultiples
+    { 
+        [TestMethod]
+        public void PassMultiples()
+        {
+            Assert.AreEqual(true, MathLibrary.IsMultiple(4, 2));
+            Assert.AreEqual(true, MathLibrary.IsMultiple(9, 3));
+            Assert.AreEqual(true, MathLibrary.IsMultiple(12, 6));
+            Assert.AreEqual(true, MathLibrary.IsMultiple(25, 5));
+            Assert.AreEqual(true, MathLibrary.IsMultiple(4648, 332));
+            Assert.AreEqual(true, MathLibrary.IsMultiple(2, 1));
+        }
+
+        [TestMethod]
+        public void FailMultiples()
+        {
+            Assert.AreEqual(false, MathLibrary.IsMultiple(4, 3));
+            Assert.AreEqual(false, MathLibrary.IsMultiple(1, 0));
+            Assert.AreEqual(false, MathLibrary.IsMultiple(13, 3));
+            Assert.AreEqual(false, MathLibrary.IsMultiple(19, 18));
+            Assert.AreEqual(false, MathLibrary.IsMultiple(23, 2));
+            Assert.AreEqual(false, MathLibrary.IsMultiple(37, 6));
+        }
+    }
 }
