@@ -18,3 +18,4 @@ E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\ProjectEuler\obj\Debu
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csproj.CopyComplete
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.exe
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.pdb
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csproj.CoreCompileInputs.cache
