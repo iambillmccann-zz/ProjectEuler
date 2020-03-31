@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using EulerLibrary;
 
 namespace UtilitiesTests
@@ -74,6 +75,39 @@ namespace UtilitiesTests
             Assert.AreEqual(385, MathLibrary.SumNaturalSquares(10));
             Assert.AreEqual(0, MathLibrary.SumNaturalSquares(0));
             Assert.AreEqual(0, MathLibrary.SumNaturalSquares(-10));
+        }
+
+        [TestMethod]
+        public void TestGetPrime()
+        {
+            List<long> actual = MathLibrary.GetPrime(20);
+            List<long> expected = new List<long> { 2, 3, 5, 7, 11, 13, 17, 19 };
+            Assert.AreEqual(expected[5], actual[5]);
+
+            actual = MathLibrary.GetPrime(23);
+            Assert.AreEqual(9, actual.Count);
+
+            actual = MathLibrary.GetPrime(7920);
+            Assert.AreEqual(1000, actual.Count);
+            Assert.AreEqual(7919, actual[actual.Count - 1]);
+        }
+
+        [TestMethod]
+        public void TestSeriesProduct()
+        {
+            List<long> numbers = new List<long> { 2, 3, 4, 5 };
+            Assert.AreEqual(120, MathLibrary.SeriesProduct(numbers));
+            numbers = new List<long> { 0, 999, 33, -1, 10 };
+            Assert.AreEqual(0, MathLibrary.SeriesProduct(numbers));
+            numbers = new List<long> { 9, 9, 8, 9 };
+            Assert.AreEqual(5832, MathLibrary.SeriesProduct(numbers));
+        }
+
+        [TestMethod]
+        public void TestSeriesSum()
+        {
+            List<long> numbers = new List<long> { 2, 3, 5, 7 };
+            Assert.AreEqual(17, MathLibrary.SeriesSum(numbers));
         }
     }
 }
