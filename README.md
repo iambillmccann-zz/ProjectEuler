@@ -2,11 +2,10 @@
 Project Euler was started by Colin Hughes (a.k.a. euler) in October 2001 as a sub-section on mathschallenge.net. Who could have known how popular these types of problems would turn out to be? Since then the membership has continued to grow and Project Euler moved to its own domain in 2006.
 
 ## What is this?
-It is important to code every day to keep our skills sharp. I have created this repository for my solutions to Project Euler challenges. This particular repository contains my solutions written in C#. I have similar repositories for Python,
-Rust, Java, Scala, and C++.
+It is important to code every day to keep our skills sharp. I have created this repository for my solutions to Project Euler challenges. This particular repository contains my solutions written in C#. I have similar repositories for Python, Rust, Java, Scala, and C++.
 
 ## Structure of this code
-This application runs as a console application. It is build for .Net running on Windows. The solution is organized into three folders, which also reflect the namespaces of the project. These are:
+This application runs as a console application. It is built for .Net running on Windows. The solution is organized into three folders, which also reflect the namespaces of the project. These are:
 
 - ** ProjectEuler ** this contains a single source file (Program.cs) and the App.config.
 - ** EulerLibrary ** this is the parent folder for the solution's class libraries.
