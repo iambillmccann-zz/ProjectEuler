@@ -67,44 +67,52 @@ namespace EulerLibrary.Problems
                 {
                     if (horizontal < 20 - seriesSize)
                     {
-                        List<long> series = new List<long>();
-                        series.Add(matrix[vertical, horizontal]);
-                        series.Add(matrix[vertical, horizontal + 1]);
-                        series.Add(matrix[vertical, horizontal + 2]);
-                        series.Add(matrix[vertical, horizontal + 3]);
+                        List<long> series = new List<long>
+                        {
+                            matrix[vertical, horizontal],
+                            matrix[vertical, horizontal + 1],
+                            matrix[vertical, horizontal + 2],
+                            matrix[vertical, horizontal + 3]
+                        };
                         long trial = MathLibrary.SeriesProduct(series);
                         if (trial > result) result = trial;
                     }
 
                     if (vertical < 20 - seriesSize)
                     {
-                        List<long> series = new List<long>();
-                        series.Add(matrix[vertical, horizontal]);
-                        series.Add(matrix[vertical + 1, horizontal]);
-                        series.Add(matrix[vertical + 2, horizontal]);
-                        series.Add(matrix[vertical + 3, horizontal]);
+                        List<long> series = new List<long>
+                        {
+                            matrix[vertical, horizontal],
+                            matrix[vertical + 1, horizontal],
+                            matrix[vertical + 2, horizontal],
+                            matrix[vertical + 3, horizontal]
+                        };
                         long trial = MathLibrary.SeriesProduct(series);
                         if (trial > result) result = trial;
                     }
 
                     if ((vertical < 20 - seriesSize) & (horizontal < 20 - seriesSize))
                     {
-                        List<long> series = new List<long>();
-                        series.Add(matrix[vertical + 3, horizontal]);
-                        series.Add(matrix[vertical + 2, horizontal + 1]);
-                        series.Add(matrix[vertical + 1, horizontal + 2]);
-                        series.Add(matrix[vertical, horizontal + 3]);
+                        List<long> series = new List<long>
+                        {
+                            matrix[vertical + 3, horizontal],
+                            matrix[vertical + 2, horizontal + 1],
+                            matrix[vertical + 1, horizontal + 2],
+                            matrix[vertical, horizontal + 3]
+                        };
                         long trial = MathLibrary.SeriesProduct(series);
                         if (trial > result) result = trial;
                     }
 
                     if ((vertical < 20 - seriesSize) & (horizontal < 20 - seriesSize))
                     {
-                        List<long> series = new List<long>();
-                        series.Add(matrix[vertical, horizontal]);
-                        series.Add(matrix[vertical + 1, horizontal + 1]);
-                        series.Add(matrix[vertical + 2, horizontal + 2]);
-                        series.Add(matrix[vertical + 3, horizontal + 3]);
+                        List<long> series = new List<long>
+                        {
+                            matrix[vertical, horizontal],
+                            matrix[vertical + 1, horizontal + 1],
+                            matrix[vertical + 2, horizontal + 2],
+                            matrix[vertical + 3, horizontal + 3]
+                        };
                         long trial = MathLibrary.SeriesProduct(series);
                         if (trial > result) result = trial;
                     }
