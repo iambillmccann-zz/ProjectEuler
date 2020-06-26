@@ -67,7 +67,7 @@ namespace ProjectEuler.Problems
         {
             int problemNumber;
 
-            ProblemFactory problemFactory = new ProblemFactory();
+            // ProblemFactory problemFactory = new ProblemFactory();
             totalTime = new Stopwatch();
 
             problemNumber = GetUserInput();
@@ -76,7 +76,7 @@ namespace ProjectEuler.Problems
             {
                 totalTime.Reset();
                 totalTime.Start();
-                string result = problemFactory.GetSolution(problemNumber).Compute();
+                string result = ProblemFactory.GetSolution(problemNumber).Compute();
                 totalTime.Stop();
 
                 Console.WriteLine("\n-----------------------------------------------------------------------");

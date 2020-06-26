@@ -13,6 +13,10 @@
 *.sln.docstates
 
 # Build results
+*.dll
+*.pdb
+*.exe
+*.cache
 [Dd]ebug/
 [Rr]elease/
 x64/

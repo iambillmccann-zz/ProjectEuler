@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using EulerLibrary;
+using System.Linq;
 
 namespace UtilitiesTests
 {
@@ -89,7 +90,7 @@ namespace UtilitiesTests
 
             actual = MathLibrary.GetPrime(7920);
             Assert.AreEqual(1000, actual.Count);
-            Assert.AreEqual(7919, actual[actual.Count - 1]);
+            Assert.AreEqual(7919, actual[^1]);
         }
 
         [TestMethod]
@@ -108,6 +109,22 @@ namespace UtilitiesTests
         {
             List<long> numbers = new List<long> { 2, 3, 5, 7 };
             Assert.AreEqual(17, MathLibrary.SeriesSum(numbers));
+        }
+
+        [TestMethod]
+        public void TestGetDivisors()
+        {
+            List<long> divisors = MathLibrary.GetDivisors(1);
+            Assert.IsTrue( divisors[0] == 1 );
+            divisors = MathLibrary.GetDivisors(3);
+            Assert.IsTrue(divisors[0] == 1 && divisors[1] == 3);
+            divisors = MathLibrary.GetDivisors(28);
+            Assert.IsTrue(divisors.Contains(1) &&
+                          divisors.Contains(2) &&
+                          divisors.Contains(4) &&
+                          divisors.Contains(7) &&
+                          divisors.Contains(14) &&
+                          divisors.Contains(28));
         }
     }
 }

@@ -214,7 +214,7 @@ namespace EulerLibrary
                 {
                     divisors.Add(divisor);
                     long quotient = number / divisor;
-                    if (divisor != quotient & number != quotient) divisors.Add(number / divisor);
+                    if (divisor != quotient & number != divisor) divisors.Add(quotient);
                 }
             }
 
