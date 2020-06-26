@@ -14,7 +14,7 @@ namespace EulerLibrary.Problems
         /// </summary>
         /// <param name="problemNumber">The number of the problem.</param>
         /// <returns>The class that will solve the problem</returns>
-        public IEulerSolution GetSolution(int problemNumber)
+        public static IEulerSolution GetSolution(int problemNumber)
         {
             switch (problemNumber)
             {
