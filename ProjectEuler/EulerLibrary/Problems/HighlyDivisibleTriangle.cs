@@ -33,8 +33,7 @@ namespace EulerLibrary.Problems
             while (!done)
             {
                 triangle += sequence;
-                List<long> divisors = MathLibrary.GetDivisors(triangle);
-                if (divisors.Count > minimum) done = true;
+                if (MathLibrary.GetDivisors(triangle).Count > minimum) done = true;
                 ++sequence;
             }
 
