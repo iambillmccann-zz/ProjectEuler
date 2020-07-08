@@ -8,3 +8,4 @@ E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\bin\Debu
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.dll
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.pdb
 E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.csproj.CoreCompileInputs.cache
+E:\Bill\Documents\GitHubProjects\ProjectEuler\ProjectEuler\EulerLibrary\obj\Debug\EulerLibrary.csprojAssemblyReference.cache

@@ -207,8 +207,9 @@ namespace EulerLibrary
         public static List<long> GetDivisors(long number)
         {
             List<long> divisors = new List<long>();
+            long limit = (long)Math.Ceiling(Math.Sqrt((double)number));
 
-            for (long divisor = 1; divisor <= Math.Sqrt((double)number); divisor++)
+            for (long divisor = 1; divisor <= limit; divisor++)
             {
                 if (IsMultiple(number, divisor))
                 {
